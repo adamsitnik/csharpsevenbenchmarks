@@ -12,6 +12,8 @@ namespace Benchmarks
         static void Main(string[] args)
         {
             BenchmarkRunner.Run<InitializingBigStructs>();
+            BenchmarkRunner.Run<ReadOnlyFields>();
+            BenchmarkRunner.Run<ReadingBigStructs>();
         }
     }
 }

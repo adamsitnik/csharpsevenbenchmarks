@@ -1,10 +1,13 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Attributes.Exporters;
 using BenchmarkDotNet.Attributes.Jobs;
 using System.Runtime.CompilerServices;
 
 namespace Benchmarks
 {
     [LegacyJitX86Job, LegacyJitX64Job, RyuJitX64Job]
+    [RPlotExporter]
+    [CsvMeasurementsExporter]
     public class InitializingBigStructs
     {
         struct BigStruct
